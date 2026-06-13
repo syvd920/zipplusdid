@@ -843,3 +843,40 @@ pointer-events:none;
   border-radius:2px!important;
   overflow:hidden!important;
 }
+
+
+/* ===== FINAL FIX: DID TV asset alignment =====
+   TV 배경 이미지는 왜곡 없이 꽉 채우고, 슬라이드는 TV 안쪽 화면에만 배치 */
+.did-solution-frame{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:fill!important;
+  object-position:center!important;
+  z-index:1!important;
+}
+.did-solution-visual{
+  position:relative!important;
+  overflow:hidden!important;
+}
+.tv-screen-window{
+  left:18.7%!important;
+  top:16.6%!important;
+  width:66.3%!important;
+  height:50.4%!important;
+  border-radius:1px!important;
+  overflow:hidden!important;
+  z-index:2!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)!important;
+}
+.tv-slide b{font-size:26px!important;}
+.tv-slide span{font-size:15px!important;}
+@media(max-width:800px){
+  .tv-screen-window{
+    left:18.7%!important;
+    top:16.6%!important;
+    width:66.3%!important;
+    height:50.4%!important;
+  }
+}
