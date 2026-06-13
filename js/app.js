@@ -50,5 +50,14 @@ document.querySelectorAll('.submitConsult').forEach(btn=>btn.addEventListener('c
     alert('필수 약관에 동의해 주세요.');
     return;
   }
-  alert('상담 신청 기능은 다음 단계에서 연결됩니다.');
+  if(btn.classList.contains('is-loading')) return;
+  btn.classList.add('is-loading');
+  btn.setAttribute('aria-busy','true');
+  const originalText=btn.textContent;
+  setTimeout(()=>{
+    btn.classList.remove('is-loading');
+    btn.removeAttribute('aria-busy');
+    btn.textContent=originalText;
+    alert('상담 신청 기능은 다음 단계에서 연결됩니다.');
+  }, 900);
 }));
