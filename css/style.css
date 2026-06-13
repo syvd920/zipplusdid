@@ -117,3 +117,46 @@ pointer-events:none;
 @media(max-width:800px){
   .bottom-cta .btn-glow::after{animation-duration:9s;width:46%;}
 }
+
+
+/* CTA rotating gradient border override */
+.bottom-cta .btn-glow{
+  position:relative!important;
+  overflow:hidden!important;
+  padding:3px!important;
+  border:none!important;
+  background:transparent!important;
+  border-radius:999px!important;
+}
+.bottom-cta .btn-glow::before{
+  content:""!important;
+  position:absolute;
+  width:250%;
+  height:250%;
+  left:-75%;
+  top:-75%;
+  background:conic-gradient(#9b67ff,#3b82f6,#33c7bd,#9b67ff)!important;
+  animation:ctaRotate 8s linear infinite!important;
+  z-index:0;
+}
+.bottom-cta .btn-glow::after{
+  content:""!important;
+  position:absolute;
+  inset:3px;
+  background:#eef7f4!important;
+  border-radius:999px;
+  z-index:1;
+  animation:none!important;
+  left:auto!important;
+  top:auto!important;
+  width:auto!important;
+  height:auto!important;
+}
+.bottom-cta .btn-glow > *{
+  position:relative;
+  z-index:2;
+}
+@keyframes ctaRotate{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
