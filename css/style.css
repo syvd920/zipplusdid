@@ -402,3 +402,170 @@ pointer-events:none;
 @media(max-width:800px){
   .bottom-cta .btn-glow::before{width:240%!important;opacity:.60!important;}
 }
+
+
+/* ================= HERO SECTION CENTER + AUTO LISTING SCREEN ================= */
+.hero-full{
+  min-height:100vh;
+  padding:24px 20px 34px!important;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+.hero-logo{
+  text-align:center;
+  margin:0 auto 18px!important;
+}
+.hero-center{
+  flex:1;
+  width:100%;
+  min-height:calc(100vh - 108px)!important;
+  padding:44px 48px 34px!important;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero-center::before,
+.hero-center::after{
+  display:none!important;
+  content:none!important;
+}
+.hero-center .hero-copy{
+  max-width:860px!important;
+  margin:0 auto;
+  text-align:center;
+}
+.hero-center h1{
+  margin-top:20px;
+  margin-bottom:18px;
+}
+.hero-center p{
+  margin-left:auto;
+  margin-right:auto;
+}
+.hero-center .hero-points{
+  justify-content:center;
+  margin-top:24px;
+}
+.hero-showcase{
+  width:min(760px,92%);
+  margin:34px auto 0;
+  text-align:center;
+}
+.hero-device{
+  position:relative;
+  height:250px;
+  border-radius:28px;
+  background:
+    radial-gradient(circle at 50% 30%,rgba(255,255,255,.12),transparent 34%),
+    linear-gradient(135deg,#08162d,#050505 62%,#27130f);
+  box-shadow:
+    0 0 0 10px #202020,
+    0 22px 60px rgba(0,0,0,.45),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+  overflow:hidden;
+}
+.hero-device::before{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.12);
+  background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,0));
+  pointer-events:none;
+  z-index:2;
+}
+.listing-slide{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  opacity:0;
+  transform:translateY(18px) scale(.98);
+  animation:listingSwap 12s infinite;
+}
+.listing-slide b{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 22px;
+  border-radius:999px;
+  background:rgba(240,37,32,.96);
+  color:#fff;
+  font-size:22px;
+  font-weight:950;
+  letter-spacing:-.04em;
+  box-shadow:0 10px 24px rgba(240,37,32,.28);
+}
+.listing-slide span{
+  color:#fff;
+  font-size:34px;
+  font-weight:950;
+  letter-spacing:-.06em;
+}
+.slide-a{background:linear-gradient(135deg,#0b2b5d,#06080d 64%)}
+.slide-b{background:linear-gradient(135deg,#3b0909,#070707 62%);animation-delay:3s}
+.slide-c{background:linear-gradient(135deg,#0d3a33,#070707 62%);animation-delay:6s}
+.slide-d{background:linear-gradient(135deg,#33205c,#070707 62%);animation-delay:9s}
+.hero-showcase-caption{
+  margin:20px 0 0!important;
+  color:#cfcfcf!important;
+  font-size:17px!important;
+  line-height:1.45!important;
+}
+@keyframes listingSwap{
+  0%{opacity:0;transform:translateY(18px) scale(.98)}
+  5%{opacity:1;transform:translateY(0) scale(1)}
+  23%{opacity:1;transform:translateY(0) scale(1)}
+  28%{opacity:0;transform:translateY(-18px) scale(.98)}
+  100%{opacity:0;transform:translateY(-18px) scale(.98)}
+}
+@media(max-width:800px){
+  .hero-full{
+    min-height:100vh;
+    padding:18px 0 0!important;
+  }
+  .hero-logo{
+    text-align:center;
+    padding:0 18px 8px!important;
+    margin-bottom:8px!important;
+  }
+  .hero-center{
+    min-height:calc(100vh - 58px)!important;
+    border-radius:0!important;
+    padding:32px 18px 140px!important;
+    justify-content:center;
+  }
+  .hero-center h1{
+    font-size:39px!important;
+    line-height:1.12!important;
+  }
+  .hero-center .hero-points{
+    justify-items:center;
+    margin-top:20px;
+  }
+  .hero-showcase{
+    width:92%;
+    margin-top:28px;
+  }
+  .hero-device{
+    height:190px;
+    border-radius:22px;
+    box-shadow:0 0 0 7px #202020,0 18px 42px rgba(0,0,0,.42);
+  }
+  .listing-slide b{
+    font-size:16px;
+    padding:8px 16px;
+  }
+  .listing-slide span{
+    font-size:23px;
+  }
+  .hero-showcase-caption{
+    font-size:14px!important;
+  }
+}
