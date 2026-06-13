@@ -978,3 +978,23 @@ pointer-events:none;
   .tv-slide b{font-size:20px!important;}
   .tv-slide span{font-size:12px!important;padding:5px 10px!important;}
 }
+
+
+/* ===== MICRO FIX: TV visual center alignment only =====
+   크기는 그대로 두고 TV/슬라이드 영역만 오른쪽으로 이동 */
+.tv-screen-window{
+  left:18.2%!important;
+  top:13.5%!important;
+  width:70%!important;
+  height:auto!important;
+  aspect-ratio:16 / 9!important;
+}
+@media(max-width:800px){
+  .tv-screen-window{
+    left:18.2%!important;
+    top:13.5%!important;
+    width:70%!important;
+    height:auto!important;
+    aspect-ratio:16 / 9!important;
+  }
+}
