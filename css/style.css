@@ -976,3 +976,42 @@ pointer-events:none;
   .tv-slide b{font-size:20px!important;}
   .tv-slide span{font-size:12px!important;padding:5px 10px!important;}
 }
+
+
+/* ===== TV SIZE RE-TUNE: make DID TV natural 16:9 and smaller ===== */
+.tv-screen-window{
+  left:16%!important;
+  top:14%!important;
+  width:68%!important;
+  height:auto!important;
+  aspect-ratio:16 / 9!important;
+  border-width:10px!important;
+  border-radius:4px!important;
+}
+.tv-screen-window::before{
+  bottom:-18px!important;
+  width:18%!important;
+  height:18px!important;
+}
+.tv-screen-window::after{
+  inset:10px!important;
+}
+.tv-slide{
+  inset:10px!important;
+}
+@media(max-width:800px){
+  .tv-screen-window{
+    left:16%!important;
+    top:14%!important;
+    width:68%!important;
+    height:auto!important;
+    aspect-ratio:16 / 9!important;
+    border-width:7px!important;
+  }
+  .tv-screen-window::before{
+    bottom:-14px!important;
+    height:14px!important;
+  }
+  .tv-screen-window::after{inset:7px!important;}
+  .tv-slide{inset:7px!important;}
+}
