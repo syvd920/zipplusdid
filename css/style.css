@@ -668,3 +668,54 @@ pointer-events:none;
   .hero-showcase{width:100%;margin-top:28px;}
   .hero-device{height:210px;border-radius:18px;}
 }
+
+
+/* ================= HERO TUNE: no badge, smaller one-line subcopy, 16:9 listing screen ================= */
+.hero-center .badge-red{display:none!important;}
+.hero-center .hero-copy{max-width:1040px!important;}
+.hero-center h1{
+  margin-top:0!important;
+  margin-bottom:16px!important;
+}
+.hero-center .hero-subline,
+.hero-center p.hero-subline{
+  max-width:none!important;
+  width:100%;
+  margin:0 auto 22px!important;
+  font-size:18px!important;
+  line-height:1.45!important;
+  white-space:nowrap;
+  color:rgba(255,255,255,.78)!important;
+  letter-spacing:-.045em;
+}
+.hero-showcase{
+  width:min(960px,88vw)!important;
+  margin:30px auto 0!important;
+}
+.hero-device{
+  width:100%!important;
+  height:auto!important;
+  aspect-ratio:16/9!important;
+  max-height:390px;
+  border-radius:26px!important;
+}
+.hero-showcase-caption{
+  margin-top:12px!important;
+  font-size:14px!important;
+}
+.hero.hero-full{
+  padding-top:30px!important;
+  padding-bottom:64px!important;
+}
+@media(max-width:800px){
+  .hero-center .hero-subline,
+  .hero-center p.hero-subline{
+    white-space:normal;
+    max-width:340px!important;
+    font-size:14.5px!important;
+    line-height:1.5!important;
+  }
+  .hero-showcase{width:94vw!important;margin-top:24px!important;}
+  .hero-device{aspect-ratio:16/9!important;height:auto!important;max-height:none;border-radius:18px!important;}
+  .hero-showcase-caption{font-size:12.5px!important;}
+}
