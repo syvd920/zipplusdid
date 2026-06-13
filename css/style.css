@@ -48,3 +48,22 @@
 .footer-link{border:0;background:transparent;color:#fff;padding:0;font:inherit;font-weight:800;cursor:pointer;opacity:.9}
 .footer-link:hover{opacity:1;text-decoration:underline}
 @media(max-width:800px){.vat-small{font-size:.48em}.stat .vat-small,.stat-vat{font-size:12px}.footer-links{gap:8px;font-size:13px}}
+
+.bottom-cta{bottom:32px!important;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,.18);}
+.bottom-cta::before{
+content:'';
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+transform:skewX(-25deg);
+animation:shine 5s infinite;
+pointer-events:none;
+}
+@keyframes shine{
+0%{left:-120%;}
+20%{left:140%;}
+100%{left:140%;}
+}
