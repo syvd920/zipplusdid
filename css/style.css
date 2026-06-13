@@ -569,3 +569,102 @@ pointer-events:none;
     font-size:14px!important;
   }
 }
+
+/* Hero no-box layout: full-screen centered section */
+.hero.hero-full{
+  min-height:100vh;
+  height:100vh;
+  padding:34px 20px 78px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 28%, rgba(240,37,32,.15), transparent 34%),
+    radial-gradient(circle at 50% 72%, rgba(155,103,255,.12), transparent 32%),
+    linear-gradient(180deg,#080808 0%,#111 58%,#090909 100%);
+  overflow:hidden;
+}
+.hero-logo{
+  width:100%;
+  text-align:center;
+  margin:0 0 26px;
+}
+.hero-box.hero-center{
+  max-width:1180px;
+  width:100%;
+  min-height:0;
+  padding:0;
+  margin:0 auto;
+  border-radius:0;
+  overflow:visible;
+  background:transparent;
+  box-shadow:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.hero-box.hero-center:before,
+.hero-box.hero-center:after{
+  display:none!important;
+  content:none!important;
+}
+.hero-center .hero-copy{
+  max-width:880px;
+  margin:0 auto;
+  text-align:center;
+}
+.hero-center .badge-red{
+  margin:0 auto;
+}
+.hero-center h1{
+  font-size:64px;
+  line-height:1.08;
+  margin:22px 0 18px;
+  letter-spacing:-4px;
+}
+.hero-center p{
+  max-width:760px;
+  margin:0 auto 24px;
+}
+.hero-center .hero-points{
+  justify-content:center;
+  margin-top:24px;
+}
+.hero-showcase{
+  width:min(820px,92vw);
+  margin:34px auto 0;
+  text-align:center;
+}
+.hero-device{
+  height:170px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#111827,#050505);
+  box-shadow:
+    0 0 0 8px rgba(255,255,255,.06),
+    0 24px 54px rgba(0,0,0,.42),
+    inset 0 0 0 1px rgba(255,255,255,.12);
+  overflow:hidden;
+}
+.hero-showcase-caption{
+  margin:14px 0 0!important;
+  font-size:15px!important;
+  color:rgba(255,255,255,.62)!important;
+}
+@media(max-width:800px){
+  .hero.hero-full{
+    min-height:100svh;
+    height:auto;
+    padding:24px 18px 120px;
+    justify-content:flex-start;
+  }
+  .hero-logo{font-size:25px;margin:0 0 20px;padding:0;text-align:center;}
+  .hero-box.hero-center{padding:0;margin:0;background:transparent;}
+  .hero-center h1{font-size:40px;letter-spacing:-2px;margin:18px 0 16px;}
+  .hero-center p{font-size:17px;margin-bottom:20px;}
+  .hero-center .hero-points{display:grid;grid-template-columns:1fr;gap:10px;justify-items:center;}
+  .hero-showcase{width:100%;margin-top:28px;}
+  .hero-device{height:210px;border-radius:18px;}
+}
