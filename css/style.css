@@ -880,3 +880,99 @@ pointer-events:none;
     height:50.4%!important;
   }
 }
+
+/* ===== FINAL UPDATE: matched assets + CSS TV frame slider ===== */
+/* Before/After image areas use the same 3:2 asset ratio so neither side is stretched. */
+.media-split .visual.real-paper-visual,
+.media-split .visual.did-solution-visual{
+  height:auto!important;
+  aspect-ratio:3 / 2!important;
+}
+.real-paper-visual{
+  background-image:linear-gradient(0deg,rgba(0,0,0,.08),rgba(0,0,0,.08)),url('../assets/paper_ads_window.png')!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+.did-solution-visual{
+  position:relative!important;
+  overflow:hidden!important;
+  background:#111!important;
+}
+.did-solution-frame{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  z-index:1!important;
+}
+/* Draw the TV in CSS so it keeps a real 16:9 proportion and can be made larger without distorting. */
+.tv-screen-window{
+  position:absolute!important;
+  left:10.5%!important;
+  top:9.5%!important;
+  width:79%!important;
+  height:66.6%!important;
+  z-index:3!important;
+  overflow:hidden!important;
+  border-radius:4px!important;
+  background:#08090d!important;
+  border:12px solid #101010!important;
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,.08),
+    0 16px 38px rgba(0,0,0,.42),
+    inset 0 0 0 1px rgba(255,255,255,.06)!important;
+}
+.tv-screen-window::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-22px;
+  width:18%;
+  height:22px;
+  transform:translateX(-50%);
+  background:linear-gradient(180deg,#1b1b1b,#050505);
+  border-radius:0 0 8px 8px;
+  z-index:0;
+  pointer-events:none;
+}
+.tv-screen-window::after{
+  content:""!important;
+  position:absolute!important;
+  inset:12px!important;
+  border-radius:2px!important;
+  background:linear-gradient(135deg,rgba(255,255,255,.10),transparent 34%,rgba(255,255,255,.07))!important;
+  pointer-events:none!important;
+  z-index:6!important;
+}
+.tv-slide{
+  inset:12px!important;
+  border-radius:2px!important;
+  overflow:hidden!important;
+  z-index:2!important;
+}
+.tv-slide b{
+  font-size:28px!important;
+}
+.tv-slide span{
+  font-size:15px!important;
+}
+@media(max-width:800px){
+  .media-split .visual.real-paper-visual,
+  .media-split .visual.did-solution-visual{
+    height:auto!important;
+    aspect-ratio:3 / 2!important;
+  }
+  .tv-screen-window{
+    left:10.5%!important;
+    top:9.5%!important;
+    width:79%!important;
+    height:66.6%!important;
+    border-width:8px!important;
+  }
+  .tv-screen-window::after{inset:8px!important;}
+  .tv-slide{inset:8px!important;}
+  .tv-slide b{font-size:20px!important;}
+  .tv-slide span{font-size:12px!important;padding:5px 10px!important;}
+}
