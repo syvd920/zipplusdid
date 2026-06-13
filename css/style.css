@@ -907,18 +907,19 @@ pointer-events:none;
   object-position:center!important;
   z-index:1!important;
 }
-/* Draw the TV in CSS so it keeps a real 16:9 proportion and can be made larger without distorting. */
+/* Draw the TV in CSS at a natural 16:9 ratio. Size is reduced and centered. */
 .tv-screen-window{
   position:absolute!important;
-  left:10.5%!important;
-  top:9.5%!important;
-  width:79%!important;
-  height:66.6%!important;
+  left:15%!important;
+  top:13.5%!important;
+  width:70%!important;
+  height:auto!important;
+  aspect-ratio:16 / 9!important;
   z-index:3!important;
   overflow:hidden!important;
   border-radius:4px!important;
   background:#08090d!important;
-  border:12px solid #101010!important;
+  border:10px solid #101010!important;
   box-shadow:
     0 0 0 2px rgba(255,255,255,.08),
     0 16px 38px rgba(0,0,0,.42),
@@ -965,10 +966,11 @@ pointer-events:none;
     aspect-ratio:3 / 2!important;
   }
   .tv-screen-window{
-    left:10.5%!important;
-    top:9.5%!important;
-    width:79%!important;
-    height:66.6%!important;
+    left:15%!important;
+    top:13.5%!important;
+    width:70%!important;
+    height:auto!important;
+    aspect-ratio:16 / 9!important;
     border-width:8px!important;
   }
   .tv-screen-window::after{inset:8px!important;}
