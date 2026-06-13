@@ -719,3 +719,16 @@ pointer-events:none;
   .hero-device{aspect-ratio:16/9!important;height:auto!important;max-height:none;border-radius:18px!important;}
   .hero-showcase-caption{font-size:12.5px!important;}
 }
+
+
+/* user requested hero showcase resize */
+.hero-showcase{
+  max-width:700px !important;
+  margin:20px auto 0 !important;
+}
+.hero-device{
+  width:700px !important;
+  height:390px !important;
+  max-width:100%;
+  margin:0 auto;
+}
