@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>집플러스 DID | 공인중개사 전용 매물 전광판</title>
+  <meta name="description" content="공인중개사 매물을 온라인 플랫폼과 오프라인 DID로 동시에 노출하고 광고수익까지 받을 수 있는 집플러스 DID 랜딩페이지" />
+  <meta property="og:title" content="집플러스 DID - 매물 노출과 광고수익을 동시에" />
+  <meta property="og:description" content="월 59,000원, 약정/위약금 없음, 광고 1건당 5,000원 정산" />
+  <style>
+    :root{--red:#f02525;--black:#111;--dark:#181818;--gray:#f3f4f6;--muted:#777;--line:#e9e9e9;--blue:#4463ff;--green:#14c48a;--max:520px;}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Segoe UI",sans-serif;background:#efefef;color:#151515} a{text-decoration:none;color:inherit} .page{max-width:var(--max);margin:0 auto;background:#fff;min-height:100vh;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.04)}
+    .topbar{height:56px;background:#0b0b0b;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;letter-spacing:-.03em;font-size:21px;position:sticky;top:0;z-index:20}.topbar b{color:var(--red)}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:#f1f1f1;font-size:12px;font-weight:900;letter-spacing:.02em}.pill:before{content:"";width:12px;height:12px;background:var(--red);border-radius:50%;box-shadow:0 0 0 5px rgba(240,37,37,.08)}
+    .hero{position:relative;background:radial-gradient(circle at 80% 0%,#323232,#121212 54%,#080808);color:#fff;padding:38px 18px 30px}.hero h1{font-size:38px;line-height:1.08;margin:18px 0 12px;letter-spacing:-.08em;font-weight:950}.hero h1 span{color:var(--red)}.hero p{margin:0;color:#d9d9d9;line-height:1.55;font-size:16px;font-weight:700}.hero-card{margin-top:26px;background:linear-gradient(145deg,#fff,#e9eef3);color:#111;border-radius:26px;padding:20px 18px 0;position:relative;min-height:310px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.45)}.hero-card .badge{position:absolute;left:16px;top:16px;background:var(--red);color:#fff;padding:8px 12px;border-radius:999px;font-weight:900;font-size:12px}.hero-card h2{margin:54px 0 4px;font-size:27px;letter-spacing:-.07em;line-height:1.14}.hero-card p{color:#555;font-size:14px;font-weight:800}.screen{position:absolute;right:16px;bottom:26px;width:205px;height:170px;border:9px solid #161616;border-radius:18px;background:#111;box-shadow:0 25px 35px rgba(0,0,0,.25);overflow:hidden}.screen:before{content:"실시간 매물";position:absolute;left:13px;top:12px;background:#fff;color:#111;border-radius:999px;padding:5px 10px;font-size:11px;font-weight:900}.listing{position:absolute;left:14px;right:14px;top:50px;display:grid;gap:8px}.listing div{height:28px;border-radius:8px;background:linear-gradient(90deg,#fff,#bfc7d6)}.stand{position:absolute;right:86px;bottom:0;width:58px;height:28px;background:#222;border-radius:12px 12px 0 0}.shop{position:absolute;left:18px;bottom:18px;width:145px;height:94px;border-radius:18px;background:#fff;box-shadow:0 12px 25px rgba(0,0,0,.1);padding:14px}.shop b{font-size:18px}.shop small{display:block;margin-top:6px;color:#666;font-weight:800}.shine{position:absolute;width:220px;height:220px;background:radial-gradient(circle,rgba(68,99,255,.22),transparent 60%);right:-50px;top:70px}.cta-main{display:block;margin:24px auto 0;width:100%;max-width:390px;border:0;border-radius:999px;background:linear-gradient(120deg,#eef2ff,#e7fff5);color:#101828;padding:18px 22px;font-size:18px;font-weight:950;text-align:center;box-shadow:0 0 0 2px #4571ff inset,0 0 0 4px rgba(20,196,138,.35) inset,0 14px 35px rgba(69,113,255,.35)}
+    section{padding:54px 18px}.white{background:#fff}.light{background:#f7f7f7}.dark{background:#171717;color:#fff}.center{text-align:center}.title{font-size:32px;line-height:1.16;letter-spacing:-.08em;margin:15px 0 12px;font-weight:950}.sub{color:#777;line-height:1.55;font-weight:700;margin:0 auto;max-width:360px}.dark .sub{color:#c9c9c9}.problem{display:grid;gap:14px;margin-top:26px}.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.plan{border-radius:26px;padding:24px 12px;text-align:center;background:#fff;box-shadow:0 12px 35px rgba(0,0,0,.08);min-height:310px}.plan.bad{background:#f2f2f2;color:#777}.plan.good{background:var(--red);color:#fff;transform:translateY(-10px);box-shadow:0 18px 45px rgba(240,37,37,.32)}.plan h3{font-size:24px;margin:0 0 18px;letter-spacing:-.06em}.plan dl{margin:0}.plan dt{font-size:13px;font-weight:900;opacity:.78;margin-top:15px}.plan dd{margin:3px 0 0;font-weight:950;font-size:23px;letter-spacing:-.04em}.arrow{margin:22px auto 0;width:120px;height:75px;border-right:22px solid var(--red);border-bottom:22px solid var(--red);border-radius:0 0 55px 0;transform:rotate(45deg)}
+    .top-list{background:#f1f1f1;padding-top:52px}.rank-main{background:#fff;border-radius:22px;overflow:hidden;margin-top:26px;min-height:320px;position:relative;box-shadow:0 14px 30px rgba(0,0,0,.08)}.corner{position:absolute;left:0;top:0;border-top:88px solid var(--red);border-right:88px solid transparent}.num{position:absolute;left:24px;top:18px;font-size:55px;font-weight:950}.rank-main .screen{right:24px;bottom:28px;transform:scale(1.1);transform-origin:right bottom}.rank-main h3{position:absolute;right:24px;top:26px;font-size:25px;margin:0;letter-spacing:-.05em}.rank-main p{position:absolute;right:24px;top:65px;margin:0;color:#444;font-weight:900}.rank-row{height:82px;border-radius:18px;background:#fff;margin-top:12px;display:flex;align-items:center;padding:0 18px;gap:16px;box-shadow:0 9px 24px rgba(0,0,0,.06)}.rank-row b:first-child{font-size:24px;color:var(--red)}.rank-row span{font-size:18px;font-weight:950;letter-spacing:-.05em}.mini-device{margin-left:auto;width:86px;height:48px;background:#111;border-radius:8px;position:relative}.mini-device:after{content:"";position:absolute;inset:8px;background:linear-gradient(90deg,#fff,#cbd5e1);border-radius:4px}
+    .youtube{background:#1f1d1b;color:#fff}.video-card{margin-top:25px;border-radius:20px;background:#050505;overflow:hidden;border:1px solid #333}.video-thumb{height:280px;background:linear-gradient(145deg,#111,#273141);position:relative;padding:24px}.video-thumb h3{font-size:30px;line-height:1.1;margin:52px 0 0;letter-spacing:-.07em}.play{position:absolute;left:24px;top:24px;background:var(--red);padding:10px 16px;border-radius:999px;font-weight:950;font-size:12px}.scribble{position:absolute;left:28px;top:104px;width:230px;height:28px;border:5px solid var(--red);border-left:0;border-right:0;transform:rotate(-5deg);opacity:.9}.office-person{position:absolute;right:22px;bottom:0;width:115px;height:190px;border-radius:65px 65px 0 0;background:linear-gradient(#f6d1ba 0 30%,#111 30% 100%);box-shadow:-18px 0 0 #000}.office-person:before{content:"";position:absolute;top:15px;left:34px;width:48px;height:48px;background:#1b120e;border-radius:50%}.video-meta{padding:18px 18px 22px}.video-meta b{font-size:20px;letter-spacing:-.04em}.video-meta p{color:#bbb;font-weight:700;line-height:1.5}.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.product{background:#070707;border:1px solid #222;border-radius:10px;overflow:hidden}.product-img{height:108px;background:linear-gradient(140deg,#e9eef3,#b9c1cf);position:relative}.product-img:after{content:"";position:absolute;left:18px;right:18px;bottom:22px;height:42px;border-radius:12px;background:#171717;box-shadow:0 10px 0 #444}.product strong{display:block;padding:13px 12px 2px;font-size:15px;letter-spacing:-.04em}.product small{display:block;padding:0 12px 10px;color:#aaa}.product button{margin:0 12px 12px;width:calc(100% - 24px);border:0;background:var(--red);color:#fff;border-radius:5px;height:38px;font-weight:900}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}.feature{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 14px;box-shadow:0 10px 28px rgba(0,0,0,.05)}.feature i{font-style:normal;font-size:25px}.feature b{display:block;margin-top:10px;font-size:17px;letter-spacing:-.05em}.feature p{margin:8px 0 0;color:#777;line-height:1.45;font-size:13px;font-weight:700}.stats{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid #333;border-left:1px solid #333;margin-top:24px}.stat{padding:24px 10px;text-align:center;border-right:1px solid #333;border-bottom:1px solid #333}.stat b{display:block;font-size:30px}.stat span{color:#bbb;font-weight:800;font-size:13px}.review{background:#fff;border-radius:24px;overflow:hidden;margin-top:24px;box-shadow:0 14px 34px rgba(0,0,0,.08)}.review-img{height:230px;background:linear-gradient(135deg,#f5f5f5,#cfd8e3);position:relative}.review-img:before{content:"중개사무소 DID 설치 완료";position:absolute;left:20px;top:20px;background:#111;color:#fff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900}.review-img:after{content:"";position:absolute;left:38px;right:38px;bottom:38px;height:116px;border-radius:18px;background:#111;box-shadow:0 26px 0 -10px #777}.review-body{padding:18px}.stars{color:var(--red);font-size:20px;letter-spacing:2px}.review-body h3{font-size:21px;letter-spacing:-.06em;margin:10px 0}.review-body p{color:#666;line-height:1.58;font-weight:700}.logos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:26px}.logo{height:54px;border-radius:14px;background:#fff;border:1px solid #eee;display:flex;align-items:center;justify-content:center;font-weight:950;color:#777;letter-spacing:-.03em}.form-section{background:#101010;color:#fff}.form-box{background:#fff;color:#111;border-radius:22px;padding:22px;margin-top:22px;box-shadow:0 18px 50px rgba(0,0,0,.28)}.field{margin-bottom:14px}.field label{display:block;font-weight:950;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;height:52px;border:1px solid #ddd;border-radius:12px;padding:0 14px;font-size:15px;font-weight:700}.field textarea{height:92px;padding-top:14px;resize:vertical}.agree{background:#f4f4f4;border-radius:14px;padding:13px;font-size:13px;font-weight:800;color:#444}.submit{width:100%;height:56px;border:0;border-radius:12px;background:var(--red);color:#fff;font-size:18px;font-weight:950;margin-top:16px}.footer{background:#242424;color:#fff;padding:34px 22px 116px}.footer h3{font-size:25px;margin:0 0 10px}.footer p{color:#cfcfcf;line-height:1.6;font-weight:700}.legal{font-size:12px;color:#aaa;line-height:1.8}.fixed-cta{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom));transform:translateX(-50%);width:min(430px,calc(100% - 36px));z-index:50}.toast{display:none;position:fixed;left:50%;top:70px;transform:translateX(-50%);width:min(420px,calc(100% - 32px));background:#111;color:#fff;border-radius:14px;padding:15px 18px;z-index:80;font-weight:900;box-shadow:0 14px 35px rgba(0,0,0,.25)}
+    @media (min-width:700px){.page{margin:0 auto}.hero h1{font-size:42px}} @media (max-width:380px){.hero h1{font-size:34px}.title{font-size:28px}.cards{gap:8px}.screen{transform:scale(.88);transform-origin:right bottom}.rank-main .screen{transform:scale(.95)}}
+  </style>
+</head>
+<body>
+  <div class="toast" id="toast">상담 신청이 접수되었습니다. 담당자가 확인 후 연락드립니다.</div>
+  <main class="page">
+    <div class="topbar">ZIPPLUS <b>&nbsp;DID</b></div>
+    <section class="hero" id="top">
+      <span class="pill">공인중개사 전용 혜택</span>
+      <h1>매물 홍보하고<br><span>광고수익까지</span><br>받는 DID</h1>
+      <p>온라인 플랫폼과 매장 전광판을 동시에 활용해<br>내 매물을 더 많이 노출시키는 집플러스 DID.</p>
+      <div class="hero-card">
+        <div class="shine"></div><span class="badge">월 59,000원 · 위약금 없음</span>
+        <h2>부동산 매장 앞<br>24시간 매물 쇼윈도</h2><p>네이버 매물 자동 연동 · 영상 광고 송출 · 광고수익 정산</p>
+        <div class="shop"><b>공인중개사<br>매장</b><small>DID 설치 상담</small></div><div class="screen"><div class="listing"><div></div><div></div><div></div></div></div><div class="stand"></div>
+      </div>
+      <a class="cta-main" href="#consult">무료 설치 상담 신청하기</a>
+    </section>
+
+    <section class="top-list center">
+      <span class="pill">ZIPPLUS BEST</span><h2 class="title">문의 많은 DID<br>활용 방식 TOP6</h2>
+      <div class="rank-main"><div class="corner"></div><div class="num">1</div><h3>매물 자동 노출</h3><p>네이버 등록 매물 → DID 송출</p><div class="screen"><div class="listing"><div></div><div></div><div></div></div></div></div>
+      <div class="rank-row"><b>2</b><span>동영상 광고 송출</span><div class="mini-device"></div></div>
+      <div class="rank-row"><b>3</b><span>월 광고수익 정산</span><div class="mini-device"></div></div>
+      <div class="rank-row"><b>4</b><span>공동중개 매물 공유</span><div class="mini-device"></div></div>
+      <div class="rank-row"><b>5</b><span>외부 유리창 홍보</span><div class="mini-device"></div></div>
+      <div class="rank-row"><b>6</b><span>원격 콘텐츠 관리</span><div class="mini-device"></div></div>
+    </section>
+
+    <section class="youtube center">
+      <span class="pill" style="background:#333;color:#fff">YOUTUBE PICK</span><h2 class="title">영상에서 본 그 매물,<br>매장 DID에서 바로 노출</h2><p class="sub">온라인 홍보와 오프라인 노출을 연결해 매장 방문 고객에게 실시간 매물을 보여주세요.</p>
+      <div class="video-card"><div class="video-thumb"><div class="play">▶ ZIPPLUS TV</div><div class="scribble"></div><h3>대표님 매장만<br>아직 DID가 없다면?</h3><div class="office-person"></div></div><div class="video-meta"><b>집플러스 DID 시크릿 프로모션</b><p>매물 홍보는 그대로, 광고비 부담은 낮추고 광고수익을 더하는 구조입니다.</p></div></div>
+      <div class="cards">
+        <div class="product"><div class="product-img"></div><strong>강남권 매물 노출</strong><small>DID 자동 송출</small><button>상담 신청</button></div>
+        <div class="product"><div class="product-img"></div><strong>상가 매물 홍보</strong><small>외부 유리창 노출</small><button>상담 신청</button></div>
+        <div class="product"><div class="product-img"></div><strong>신축 분양 광고</strong><small>영상 광고 지원</small><button>상담 신청</button></div>
+        <div class="product"><div class="product-img"></div><strong>공동중개 매물</strong><small>정보 유입 확대</small><button>상담 신청</button></div>
+      </div>
+    </section>
+
+    <section class="white center"><span class="pill">COST DOWN</span><h2 class="title">광고비 지출에서<br>광고수익 구조로</h2><p class="sub">기존 광고는 계속 비용이 나가지만, 집플러스 DID는 매장 매물 홍보와 광고수익 정산을 함께 설계합니다.</p><div class="compare"><div class="plan bad"><h3>기존 광고</h3><dl><dt>월 광고비</dt><dd>지출</dd><dt>노출 위치</dt><dd>온라인 한정</dd><dt>광고수익</dt><dd>0원</dd><dt>위약금</dt><dd>발생 가능</dd></dl></div><div class="plan good"><h3>집플러스 DID</h3><dl><dt>월 이용료</dt><dd>59,000원</dd><dt>노출 위치</dt><dd>온·오프라인</dd><dt>광고수익</dt><dd>최대 30만원</dd><dt>위약금</dt><dd>없음</dd></dl></div></div><a class="cta-main" href="#consult">무료 설치 상담 신청하기</a></section>
+
+    <section class="light center"><span class="pill">FEATURE</span><h2 class="title">부동산 매장에 필요한<br>기능만 담았습니다</h2><div class="features"><div class="feature"><i>📱</i><b>네이버 매물 연동</b><p>등록된 매물을 DID 화면에 자동 노출</p></div><div class="feature"><i>🖥️</i><b>55인치 DID</b><p>LG 정품 사이니지 기반 선명한 화면</p></div><div class="feature"><i>💰</i><b>광고수익 정산</b><p>광고 1건당 5,000원 정산</p></div><div class="feature"><i>🎬</i><b>영상 광고 지원</b><p>분양·매물·지역 홍보 영상 송출</p></div><div class="feature"><i>⚡</i><b>원격 관리</b><p>콘텐츠 변경과 화면 관리를 원격 처리</p></div><div class="feature"><i>🏢</i><b>공동중개 확장</b><p>매물 유입과 공유 네트워크 강화</p></div></div></section>
+
+    <section class="dark center"><span class="pill" style="background:#2d2d2d;color:#fff">DATA</span><h2 class="title">숫자로 보는<br>집플러스 DID</h2><div class="stats"><div class="stat"><b>39,000+</b><span>중개사 회원</span></div><div class="stat"><b>59,000원</b><span>월 이용료</span></div><div class="stat"><b>5,000원</b><span>광고 1건 정산</span></div><div class="stat"><b>0원</b><span>위약금</span></div></div></section>
+
+    <section class="white center"><span class="pill">REAL CASE</span><h2 class="title">실제 설치 사례</h2><p class="sub">매장 유리창, 상담 공간, 외부 보행 동선에 맞춰 DID를 설치합니다.</p><div class="review"><div class="review-img"></div><div class="review-body"><div class="stars">★★★★★</div><h3>“매장 앞에서 매물을 보고 들어오는 손님이 늘었습니다.”</h3><p>기존에는 온라인 광고에만 의존했지만, DID 설치 후 매장 앞 노출이 생겨 상담 연결이 쉬워졌습니다.</p></div></div></section>
+
+    <section class="light center"><span class="pill">PARTNER</span><h2 class="title">집플러스 DID<br>운영 파트너</h2><div class="logos"><div class="logo">LG</div><div class="logo">NAVER</div><div class="logo">ZIPPLUS</div><div class="logo">DID</div><div class="logo">CP 지원</div><div class="logo">광고주</div></div></section>
+
+    <section class="form-section" id="consult"><span class="pill" style="background:#2d2d2d;color:#fff">상담 신청</span><h2 class="title">대표님 매장에 맞는<br>DID 도입 조건을 확인하세요</h2><p class="sub">입력하신 정보는 상담 목적 외 사용하지 않습니다.</p><form class="form-box" id="leadForm"><div class="field"><label>상호명 *</label><input name="company" required placeholder="예: 집플러스공인중개사" /></div><div class="field"><label>대표자명 *</label><input name="name" required placeholder="성함을 입력해 주세요" /></div><div class="field"><label>연락처 *</label><input name="phone" required inputmode="tel" placeholder="010-0000-0000" /></div><div class="field"><label>지역</label><input name="area" placeholder="예: 서울 강남구" /></div><div class="field"><label>관심 내용</label><select name="interest"><option>DID 설치 상담</option><option>광고수익 구조 문의</option><option>네이버 매물 연동 문의</option><option>지사/영업 제휴 문의</option></select></div><div class="field"><label>문의 내용</label><textarea name="memo" placeholder="궁금한 내용을 남겨주세요"></textarea></div><div class="agree"><input type="checkbox" required checked /> 개인정보 수집 및 상담 연락에 동의합니다.</div><button class="submit" type="submit">무료 설치 상담 신청하기</button></form></section>
+
+    <footer class="footer"><h3>편하게 문의하세요</h3><p>평일 오전 9시 ~ 오후 6시<br><b style="font-size:28px;color:#fff">집플러스 DID 상담센터</b></p><div class="legal">이용약관 ㅣ 개인정보 처리방침 ㅣ 이메일무단수집거부<br>상호명: 집플러스 DID<br>본 페이지의 이미지·문구는 샘플 제작용으로 구성되었습니다.</div></footer>
+  </main>
+  <div class="fixed-cta"><a class="cta-main" href="#consult">무료 설치 상담 신청하기</a></div>
+<script>
+  // GitHub Pages는 정적 호스팅이라 서버 처리가 없습니다.
+  // 아래 ENDPOINT에 Google Apps Script Web App URL 또는 자체 서버 API 주소를 넣으면 폼 전송이 연결됩니다.
+  const ENDPOINT = "";
+  const form = document.getElementById('leadForm');
+  const toast = document.getElementById('toast');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.createdAt = new Date().toISOString();
+    if(!ENDPOINT){ console.log('lead sample', data); showToast('샘플 접수 완료: 서버 API 주소를 넣으면 실제 전송됩니다.'); form.reset(); return; }
+    try{
+      await fetch(ENDPOINT,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      showToast('상담 신청이 접수되었습니다.'); form.reset();
+    }catch(err){ showToast('전송 실패: 잠시 후 다시 시도해 주세요.'); }
+  });
+  function showToast(msg){toast.textContent=msg;toast.style.display='block';setTimeout(()=>toast.style.display='none',3000)}
+</script>
+</body>
+</html>
