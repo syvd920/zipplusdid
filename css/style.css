@@ -39,3 +39,12 @@
 .terms{padding:13px 14px;border-radius:8px;background:#f4f4f4}.agree-box{padding:14px 16px}
 .terms .term-row .custom-check{color:#666}.agree-box .term-row .custom-check{color:#ddd}.agree-box .term-row .custom-box:after{color:#fff}.agree-box .term-row .custom-check input:checked + .custom-box:after{color:#fff}
 @media(max-width:800px){.custom-box{flex-basis:14px;width:14px;height:14px}.term-row .custom-box{flex-basis:15px;width:15px;height:15px}.custom-check,.term-row,.term-row .custom-check{font-size:12.5px}.all-check{font-size:13px}.term-more{font-size:20px}}
+
+
+/* final edits: price VAT + footer legal links */
+.vat-small{display:inline-block;font-size:.42em;font-weight:800;letter-spacing:-.03em;opacity:.88;margin-left:6px;vertical-align:baseline;white-space:nowrap}
+.stat .vat-small,.stat-vat{display:block;font-size:14px;margin:4px 0 0;color:#ccc;opacity:.9}
+.footer-links{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.footer-link{border:0;background:transparent;color:#fff;padding:0;font:inherit;font-weight:800;cursor:pointer;opacity:.9}
+.footer-link:hover{opacity:1;text-decoration:underline}
+@media(max-width:800px){.vat-small{font-size:.48em}.stat .vat-small,.stat-vat{font-size:12px}.footer-links{gap:8px;font-size:13px}}

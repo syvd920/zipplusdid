@@ -6,13 +6,25 @@ if(caseCards){
 
 const formModal=document.getElementById('formModal');
 const legalModal=document.getElementById('legalModal');
+const legalTexts={
+  '개인정보 수집 및 이용동의': `<p>집플러스는 상담 신청 및 서비스 안내를 위해 상호명, 연락처, 지역 정보를 수집합니다.</p><p>수집된 정보는 상담 진행, 설치 가능 여부 확인, 고객 문의 응대 목적으로 사용됩니다.</p><p>보유 기간은 상담 신청일로부터 1년이며, 필수 항목 동의 거부 시 상담 신청이 제한될 수 있습니다.</p>`,
+  '개인정보 제3자 제공 동의': `<p>상담 및 설치 안내를 위해 필요한 경우 담당 영업자, 설치 협력사 등에게 최소한의 정보가 제공될 수 있습니다.</p><p>제공 항목은 상호명, 연락처, 지역이며, 제공 목적 달성 후 관련 법령에 따라 안전하게 파기됩니다.</p>`,
+  '마케팅 활용 및 서비스 관련 정보 수신 동의': `<p>집플러스 DID 서비스 안내, 광고수익 프로그램, 이벤트 및 혜택 안내를 위해 연락처를 활용할 수 있습니다.</p><p>해당 동의는 선택사항이며 동의하지 않아도 상담 신청은 가능합니다.</p>`,
+  '이용약관': `<p>본 랜딩페이지는 집플러스 DID 상담 신청을 위한 페이지입니다.</p><p>상담 신청자는 정확한 정보를 입력해야 하며, 허위 정보 입력 시 상담이 제한될 수 있습니다.</p><p>서비스 이용 조건, 설치 가능 여부, 비용 및 정산 조건은 상담 및 계약 단계에서 최종 확인됩니다.</p>`,
+  '개인정보 처리방침': `<p>집플러스는 이용자의 개인정보 보호를 중요하게 생각하며, 상담 신청 과정에서 수집되는 개인정보를 안전하게 관리합니다.</p><p>수집 항목은 상호명, 연락처, 지역이며 상담 진행, 서비스 안내, 설치 가능 여부 확인 목적으로 사용됩니다.</p><p>이용자는 개인정보 열람, 정정, 삭제를 요청할 수 있습니다.</p>`,
+  '이메일무단수집거부': `<p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부합니다.</p><p>이를 위반할 경우 관련 법령에 따라 처벌될 수 있습니다.</p>`
+};
+
 
 document.querySelectorAll('.openForm').forEach(b=>b.addEventListener('click',()=>formModal.classList.add('on')));
 document.querySelectorAll('.closeModal').forEach(b=>b.addEventListener('click',()=>formModal.classList.remove('on')));
 document.querySelectorAll('.openLegal').forEach(b=>b.addEventListener('click',(e)=>{
   e.preventDefault();
   e.stopPropagation();
-  document.getElementById('legalTitle').textContent=b.dataset.title;
+  const title=b.dataset.title || '약관 안내';
+  document.getElementById('legalTitle').textContent=title;
+  const body=document.getElementById('legalBody');
+  if(body) body.innerHTML=legalTexts[title] || legalTexts['개인정보 처리방침'];
   legalModal.classList.add('on');
 }));
 const closeLegal=document.querySelector('.closeLegal');
