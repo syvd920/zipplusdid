@@ -329,3 +329,76 @@ pointer-events:none;
     opacity:.36!important;
   }
 }
+
+/* FINAL OVERRIDE: fixed inner gradient spin + subtle outer glow */
+.bottom-cta{
+  bottom:32px!important;
+  overflow:visible!important;
+  filter:
+    drop-shadow(0 14px 26px rgba(0,0,0,.20))
+    drop-shadow(0 0 12px rgba(168,85,247,.16))
+    drop-shadow(0 0 18px rgba(59,130,246,.11))
+    drop-shadow(0 0 24px rgba(34,197,94,.07))!important;
+}
+.bottom-cta::before{display:none!important;content:none!important;animation:none!important;}
+.bottom-cta .btn-glow{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  border:2px solid rgba(51,199,189,.55)!important;
+  background:#f6fffc!important;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.75) inset,
+    0 0 22px rgba(168,85,247,.13),
+    0 0 28px rgba(59,130,246,.10),
+    0 0 34px rgba(34,197,94,.07)!important;
+}
+.bottom-cta .btn-glow::before{
+  content:""!important;
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  width:220%!important;
+  height:auto!important;
+  aspect-ratio:1/1!important;
+  background:conic-gradient(
+    from 90deg at 50% 50%,
+    rgba(168,85,247,.72) 0%,
+    rgba(59,130,246,.64) 33%,
+    rgba(34,197,94,.58) 66%,
+    rgba(168,85,247,.72) 100%
+  )!important;
+  opacity:.62!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  translate:-50% -50%!important;
+  transform:none!important;
+  rotate:0deg;
+  animation:ctaConicRotateFixed 4.8s linear infinite!important;
+  filter:blur(1px)!important;
+}
+.bottom-cta .btn-glow::after{
+  content:""!important;
+  position:absolute!important;
+  inset:2px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.54)!important;
+  z-index:1!important;
+  pointer-events:none!important;
+  animation:none!important;
+  transform:none!important;
+  opacity:1!important;
+  filter:none!important;
+}
+.bottom-cta .btn-glow > span,
+.bottom-cta .btn-glow > *{
+  position:relative!important;
+  z-index:2!important;
+}
+@keyframes ctaConicRotateFixed{
+  from{rotate:0deg;}
+  to{rotate:360deg;}
+}
+@media(max-width:800px){
+  .bottom-cta .btn-glow::before{width:240%!important;opacity:.60!important;}
+}
