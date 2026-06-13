@@ -18,3 +18,24 @@
 .modal-lead{margin:-12px 0 22px;color:#666;font-size:16px;line-height:1.55}
 .terms .custom-check{color:#333}.terms .term-row{color:#444}.terms .all-check{border-bottom-color:#ddd}
 @media(max-width:800px){.custom-box{flex-basis:19px;width:19px;height:19px}.term-row{align-items:flex-start}.term-more{padding-top:2px}.all-check{font-size:15px}}
+
+
+/* Compact agreement UI: small red all-check + text check marks for required/optional rows */
+.terms,.agree-box{font-size:13px}
+.custom-check{gap:7px;font-size:13px;font-weight:700;line-height:1.35}
+.all-check{font-size:13px;padding:0 0 9px;margin-bottom:6px;align-items:center}
+.custom-box{flex:0 0 14px;width:14px;height:14px;border-radius:4px;border:1.5px solid #ddd;background:#fff;margin-top:1px}
+.custom-box:after{left:4px;top:1px;width:4px;height:8px;border-width:0 1.7px 1.7px 0}
+.custom-check input:checked + .custom-box{background:var(--red);border-color:var(--red);box-shadow:none}
+.term-row{padding:6px 0;gap:6px;font-size:13px;line-height:1.35}
+.term-row .custom-check{font-size:13px;font-weight:600;color:#666;align-items:center}
+.term-row .custom-box{border:0;background:transparent;box-shadow:none;flex-basis:15px;width:15px;height:15px;margin-top:0;border-radius:0}
+.term-row .custom-box:after{content:"✓";position:static;display:block;width:auto;height:auto;border:0;transform:none;color:#111;font-size:13px;line-height:15px;font-weight:800;opacity:.38}
+.term-row .custom-check input:checked + .custom-box{background:transparent;border:0;box-shadow:none}
+.term-row .custom-check input:checked + .custom-box:after{transform:none;opacity:1;color:#111}
+.term-row em{font-size:13px;color:#666;font-weight:700;margin-right:3px}.term-row em.optional{color:#666}
+.term-more{font-size:22px;line-height:1;color:#b6b6b6;padding:0 2px;font-weight:300}
+.term-more:hover{color:#777}
+.terms{padding:13px 14px;border-radius:8px;background:#f4f4f4}.agree-box{padding:14px 16px}
+.terms .term-row .custom-check{color:#666}.agree-box .term-row .custom-check{color:#ddd}.agree-box .term-row .custom-box:after{color:#fff}.agree-box .term-row .custom-check input:checked + .custom-box:after{color:#fff}
+@media(max-width:800px){.custom-box{flex-basis:14px;width:14px;height:14px}.term-row .custom-box{flex-basis:15px;width:15px;height:15px}.custom-check,.term-row,.term-row .custom-check{font-size:12.5px}.all-check{font-size:13px}.term-more{font-size:20px}}
