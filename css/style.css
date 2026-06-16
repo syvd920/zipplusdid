@@ -1504,3 +1504,26 @@ body{font-weight:400!important;}
   .recommend{position:static!important;display:inline-flex!important;margin-bottom:14px!important;}
   .premium-list div{font-size:15.5px!important;}
 }
+
+/* === FIX6: hero only fills first screen + section2 begins after fold === */
+.hero.hero-full.hero-premium{
+  min-height:calc(100svh - 74px)!important;
+  height:auto!important;
+  padding:0!important;
+}
+.hero-inner-premium{
+  min-height:calc(100svh - 74px)!important;
+  padding:54px 0 54px!important;
+}
+.hero-copy-premium h1{
+  font-size:clamp(54px,5.1vw,76px)!important;
+}
+.hero-did-stage{min-height:min(560px,calc(100svh - 160px))!important;}
+.did-device-3d{height:min(520px,calc(100svh - 180px))!important;min-height:430px!important;}
+.problem-solution-premium{padding-top:110px!important;}
+@media(max-width:900px){
+  .hero.hero-full.hero-premium{min-height:calc(100svh - 64px)!important;}
+  .hero-inner-premium{min-height:calc(100svh - 64px)!important;padding:42px 0 56px!important;}
+  .hero-did-stage{min-height:360px!important;}
+  .did-device-3d{height:380px!important;min-height:0!important;}
+}
