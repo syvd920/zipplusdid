@@ -1270,3 +1270,138 @@ pointer-events:none;
   .section.white .solution-box h3{padding-right:0!important;font-size:29px!important;}
   .section.white .pain-item,.section.white .solution-item{font-size:16.5px!important;font-weight:700!important;}
 }
+
+
+/* ===== FIX3: 실제 상단 띠 분리 + 글씨 잘림 방지 ===== */
+body{font-weight:400!important;}
+.top-band{
+  width:100%;
+  height:78px;
+  background:#050505;
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.14);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  z-index:200;
+}
+.top-band-inner{
+  width:min(1200px,calc(100% - 48px));
+  height:100%;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  gap:24px;
+}
+.top-benefit{
+  justify-self:start;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:-.04em;
+  white-space:nowrap;
+}
+.top-benefit em{font-style:normal;color:#ffe600;font-weight:900;}
+.yt-icon{
+  width:34px;height:24px;border-radius:7px;background:#f02520;color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;font-size:13px;line-height:1;
+}
+.top-logo{
+  justify-self:center;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:33px;font-weight:900;line-height:1;color:#fff;letter-spacing:-.055em;
+  padding-bottom:2px;
+}
+.top-logo span{
+  height:30px;padding:0 10px;border-radius:8px;background:#f02520;color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:900;letter-spacing:-.02em;line-height:1;
+}
+.top-cta{
+  justify-self:end;
+  height:46px;padding:0 25px;border-radius:999px;border:1px solid rgba(255,255,255,.9);
+  background:transparent;color:#fff;font-size:15px;font-weight:800;letter-spacing:-.035em;cursor:pointer;
+  white-space:nowrap;
+}
+/* 기존 로고형 헤더는 중복/잘림 원인이라 제거 */
+.hero-logo{display:none!important;}
+.hero.hero-full{
+  min-height:calc(100vh - 78px)!important;
+  height:auto!important;
+  padding:70px 20px 76px!important;
+  justify-content:center!important;
+  overflow:visible!important;
+}
+.hero-box.hero-center{
+  flex:0 0 auto!important;
+  min-height:auto!important;
+}
+.hero-center h1{
+  font-size:68px!important;
+  font-weight:900!important;
+  line-height:1.08!important;
+  letter-spacing:-.065em!important;
+}
+.hero-center .hero-subline,
+.hero-center p.hero-subline{
+  font-size:18px!important;
+  font-weight:400!important;
+  color:rgba(255,255,255,.76)!important;
+}
+.hero-point{font-weight:700!important;color:rgba(255,255,255,.82)!important;}
+
+/* 섹션2 폰트 과두꺼움 완화 + 비교 유지 */
+.section.white h2{font-size:56px!important;font-weight:900!important;}
+.section.white p.lead{font-weight:400!important;color:#777!important;}
+.section.white .pain-box h3{font-weight:800!important;}
+.section.white .pain-item{font-weight:650!important;color:#404040!important;}
+.section.white .solution-box::before{content:none!important;display:none!important;}
+.section.white .solution-box h3{font-weight:850!important;}
+.section.white .solution-item{font-weight:700!important;}
+
+@media(max-width:800px){
+  .top-band{height:64px;}
+  .top-band-inner{width:calc(100% - 28px);grid-template-columns:auto 1fr;gap:10px;}
+  .top-benefit{display:none;}
+  .top-logo{justify-self:start;font-size:25px;}
+  .top-logo span{height:25px;font-size:13px;border-radius:7px;padding:0 8px;}
+  .top-cta{height:38px;padding:0 14px;font-size:13px;}
+  .hero.hero-full{min-height:calc(100svh - 64px)!important;padding:46px 18px 108px!important;}
+  .hero-center h1{font-size:42px!important;}
+  .section.white h2{font-size:38px!important;}
+}
+
+/* ===== FIX4: 히어로 섹션 배경 이미지 삽입 세팅 =====
+   사용법: 원하는 이미지를 assets/hero_bg.jpg 로 넣으면 자동 적용됩니다.
+   권장 크기: 1920x1080 이상 / 어두운 부동산 사무실, DID 화면, 텍스트 없는 이미지
+*/
+.hero.hero-full{
+  --hero-bg:url('../assets/hero_bg.jpg');
+  background-color:#050505!important;
+  background-image:
+    linear-gradient(180deg,rgba(0,0,0,.70) 0%,rgba(0,0,0,.58) 42%,rgba(0,0,0,.84) 100%),
+    radial-gradient(circle at 50% 34%,rgba(240,37,32,.18),transparent 36%),
+    var(--hero-bg)!important;
+  background-size:cover,cover,cover!important;
+  background-position:center center,center center,center center!important;
+  background-repeat:no-repeat!important;
+}
+.hero.hero-full::before{
+  content:"";
+  position:absolute;
+  inset:78px 0 0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(0,0,0,.42),transparent 28%,transparent 72%,rgba(0,0,0,.42));
+  z-index:0;
+}
+.hero-box.hero-center{
+  position:relative!important;
+  z-index:2!important;
+}
+@media(max-width:800px){
+  .hero.hero-full::before{inset:64px 0 0;}
+}
