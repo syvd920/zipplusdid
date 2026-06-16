@@ -1549,3 +1549,79 @@ body{font-weight:400!important;}
   .section.white:nth-of-type(1) .pain-box,.section.white:nth-of-type(1) .solution-box{min-height:auto;padding:30px 24px!important;}
   .section.white:nth-of-type(1) .solution-box:after{top:24px;right:22px;font-size:12px;padding:6px 10px;}
 }
+
+/* ===== FIX10: 폰트 두께 정리 + 섹션2 VS 정교화 ===== */
+html,body{font-family:"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;font-weight:500!important;}
+body *{font-family:inherit!important;}
+/* 전체 페이지에서 2단계만 사용: 제목 700 / 본문 500 */
+h1,h2,h3,h4,.logo,.top-logo,.price,.stat b,.badge-red,.pill,.btn-glow,.btn-red,.ytpill,.footer-link,.row label{font-weight:700!important;}
+p,li,span,div,input,textarea,label,button,.lead,.hero p,.hero-subline,.hero-point,.card p,.visual-card p,.modal-lead,.legal-modal p{font-weight:500!important;}
+strong,b{font-weight:700!important;}
+.hero h1,.hero-center h1,.section h2{font-weight:700!important;letter-spacing:-.055em!important;}
+.hero p,.hero-center .hero-subline,.section p.lead{font-weight:500!important;letter-spacing:-.035em!important;}
+.pain-item,.solution-item,.compare .box,.bubble p,.card h3,.visual-card h3,.step h3{font-weight:500!important;}
+.pain-box h3,.solution-box h3,.compare h3{font-weight:700!important;}
+
+/* 섹션2: 흰 배경 유지, 카드 간격 축소, VS가 양쪽 카드에 걸치도록 */
+.section.white:nth-of-type(1){background:#fff!important;}
+.section.white:nth-of-type(1) .pain-grid{
+  grid-template-columns:minmax(0,1fr) 0 minmax(0,1.06fr)!important;
+  gap:0!important;
+  column-gap:0!important;
+  max-width:1180px!important;
+  align-items:center!important;
+}
+.section.white:nth-of-type(1) .pain-grid:before{
+  inset:-28px -12px -44px -12px!important;
+  background:radial-gradient(circle at 66% 50%,rgba(240,37,32,.16),transparent 32%),radial-gradient(circle at 28% 50%,rgba(0,0,0,.055),transparent 34%)!important;
+  filter:blur(8px)!important;
+}
+.section.white:nth-of-type(1) .pain-box,
+.section.white:nth-of-type(1) .solution-box{
+  min-height:350px!important;
+  padding:38px 42px!important;
+}
+.section.white:nth-of-type(1) .pain-box{
+  background:linear-gradient(145deg,#777 0%,#696969 54%,#5f5f5f 100%)!important;
+  border:1px solid rgba(255,255,255,.45)!important;
+  box-shadow:0 18px 45px rgba(0,0,0,.16),inset 0 0 22px rgba(255,255,255,.06)!important;
+}
+.section.white:nth-of-type(1) .solution-box{
+  transform:scale(1.035)!important;
+  box-shadow:0 22px 66px rgba(240,37,32,.34),0 0 0 1px rgba(255,255,255,.18) inset,0 0 32px rgba(255,48,43,.35)!important;
+}
+.section.white:nth-of-type(1) .arrow-big{
+  position:relative!important;
+  z-index:10!important;
+  width:82px!important;
+  height:82px!important;
+  margin:0!important;
+  transform:translateX(-41px)!important;
+  background:radial-gradient(circle at 35% 25%,#3f3f3f 0%,#080808 72%)!important;
+  border:2px solid rgba(255,255,255,.42)!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.30),0 0 0 7px rgba(255,255,255,.20)!important;
+  font-size:29px!important;
+  font-weight:700!important;
+}
+.section.white:nth-of-type(1) .arrow-big:after{display:none!important;content:none!important;}
+.section.white:nth-of-type(1) .pain-box h3,
+.section.white:nth-of-type(1) .solution-box h3{
+  font-weight:700!important;
+  font-size:31px!important;
+}
+.section.white:nth-of-type(1) .pain-item,
+.section.white:nth-of-type(1) .solution-item{
+  font-weight:500!important;
+  font-size:18px!important;
+  line-height:1.42!important;
+}
+.section.white:nth-of-type(1) .pain-item span,
+.section.white:nth-of-type(1) .solution-item span.red,
+.section.white:nth-of-type(1) .solution-box:after{
+  font-weight:700!important;
+}
+@media(max-width:900px){
+  .section.white:nth-of-type(1) .pain-grid{grid-template-columns:1fr!important;gap:20px!important;max-width:640px!important;}
+  .section.white:nth-of-type(1) .arrow-big{transform:none!important;margin:-12px auto!important;width:64px!important;height:64px!important;font-size:22px!important;}
+  .section.white:nth-of-type(1) .solution-box{transform:none!important;}
+}
