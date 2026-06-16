@@ -1789,3 +1789,46 @@ strong,b{font-weight:700!important;}
   .section.white:nth-of-type(1) .solution-box:after{top:24px!important;right:22px!important;font-size:12px!important;padding:6px 10px!important;}
   .section.white:nth-of-type(1) .pain-item,.section.white:nth-of-type(1) .solution-item{font-size:16px!important;}
 }
+
+/* ===== FIX13: section2 reference alignment - right card wider + VS exactly on card boundary ===== */
+.section.white:nth-of-type(1) .pain-grid{
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)!important;
+  gap:0!important;
+  column-gap:0!important;
+  max-width:1240px!important;
+  align-items:stretch!important;
+}
+.section.white:nth-of-type(1) .pain-box{
+  background:linear-gradient(145deg,#ffffff 0%,#f9f9f9 58%,#f3f3f3 100%)!important;
+  border:1px solid #e2e2e2!important;
+  box-shadow:0 10px 24px rgba(0,0,0,.045)!important;
+  border-radius:24px 0 0 24px!important;
+}
+.section.white:nth-of-type(1) .solution-box{
+  transform:none!important;
+  min-height:400px!important;
+  border-radius:0 24px 24px 0!important;
+  background:linear-gradient(145deg,#ff332e 0%,#f02520 48%,#e20b06 100%)!important;
+  box-shadow:0 22px 62px rgba(240,37,32,.28),0 0 0 1px rgba(255,255,255,.16) inset!important;
+}
+.section.white:nth-of-type(1) .arrow-big{
+  /* 0.92 / (0.92 + 1.08) = 46%, so the badge sits on the exact border */
+  left:46%!important;
+  top:50%!important;
+  width:76px!important;
+  height:76px!important;
+  transform:translate(-50%,-50%)!important;
+  font-size:25px!important;
+  border:5px solid #fff!important;
+  box-shadow:0 10px 24px rgba(0,0,0,.24)!important;
+}
+.section.white:nth-of-type(1) .pain-grid:before{
+  inset:-26px -22px -42px -22px!important;
+  background:radial-gradient(circle at 70% 50%,rgba(240,37,32,.13),transparent 34%),radial-gradient(circle at 30% 50%,rgba(0,0,0,.025),transparent 34%)!important;
+}
+@media(max-width:900px){
+  .section.white:nth-of-type(1) .pain-grid{grid-template-columns:1fr!important;gap:20px!important;max-width:640px!important;}
+  .section.white:nth-of-type(1) .pain-box{border-radius:24px!important;}
+  .section.white:nth-of-type(1) .solution-box{border-radius:24px!important;min-height:auto!important;}
+  .section.white:nth-of-type(1) .arrow-big{left:auto!important;top:auto!important;transform:none!important;width:64px!important;height:64px!important;font-size:22px!important;}
+}
