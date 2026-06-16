@@ -1138,3 +1138,135 @@ pointer-events:none;
   .section.white .solution-item{font-size:17px!important;}
   .section.white .arrow-big{font-size:48px!important;}
 }
+
+/* ===== FIX 2026-06-16: datalab-style top band + cleaner comparison typography ===== */
+.hero.hero-full{
+  padding:0 0 66px!important;
+  background:#0a0a0a!important;
+}
+.hero-logo{
+  width:100vw!important;
+  height:86px!important;
+  margin:0 calc(50% - 50vw) 26px!important;
+  padding:0 150px!important;
+  background:#050505!important;
+  border-top:1px solid rgba(255,255,255,.08)!important;
+  border-bottom:1px solid rgba(255,255,255,.12)!important;
+  box-shadow:none!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:visible!important;
+  color:#fff!important;
+  font-size:32px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  text-align:center!important;
+  position:relative!important;
+  z-index:10!important;
+}
+.hero-logo span{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  height:30px!important;
+  padding:0 10px!important;
+  margin-left:8px!important;
+  border-radius:8px!important;
+  background:#f02520!important;
+  color:#fff!important;
+  font-size:16px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  vertical-align:middle!important;
+}
+.hero-logo::before{
+  content:"▶  중개사 한정 혜택  월 3만원부터";
+  position:absolute;
+  left:max(72px,calc((100vw - 1200px)/2));
+  top:50%;
+  transform:translateY(-50%);
+  font-size:17px;
+  font-weight:800;
+  letter-spacing:-.04em;
+  color:#fff;
+  white-space:nowrap;
+}
+.hero-logo::after{
+  content:"무료 상담 신청  →";
+  position:absolute;
+  right:max(72px,calc((100vw - 1200px)/2));
+  top:50%;
+  transform:translateY(-50%);
+  height:46px;
+  padding:0 24px;
+  border:1px solid rgba(255,255,255,.85);
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  font-weight:800;
+  color:#fff;
+  white-space:nowrap;
+}
+
+.section.white h2{
+  font-weight:900!important;
+}
+.section.white p.lead{
+  font-weight:400!important;
+  color:#777!important;
+}
+.section.white .pain-box,
+.section.white .solution-box{
+  border-radius:22px!important;
+}
+.section.white .solution-box{
+  transform:scale(1.045)!important;
+  background:linear-gradient(135deg,#ff312c 0%,#f02520 52%,#cf0600 100%)!important;
+  padding:42px 40px!important;
+}
+.section.white .solution-box::before{
+  content:none!important;
+  display:none!important;
+}
+.section.white .solution-box h3{
+  font-size:34px!important;
+  font-weight:900!important;
+  letter-spacing:-.055em!important;
+  padding-right:112px!important;
+}
+.section.white .pain-box h3{
+  font-weight:850!important;
+}
+.section.white .pain-item,
+.section.white .solution-item{
+  font-size:19px!important;
+  font-weight:700!important;
+  letter-spacing:-.035em!important;
+  line-height:1.45!important;
+}
+.section.white .solution-item{
+  color:#fff!important;
+}
+.section.white .solution-item .red,
+.section.white .solution-item span{
+  font-weight:800!important;
+}
+
+@media(max-width:800px){
+  .hero.hero-full{padding-bottom:44px!important;}
+  .hero-logo{
+    height:66px!important;
+    padding:0 18px!important;
+    margin:0 calc(50% - 50vw) 20px!important;
+    font-size:26px!important;
+  }
+  .hero-logo::before,
+  .hero-logo::after{display:none!important;content:none!important;}
+  .hero-logo span{height:26px!important;font-size:13px!important;border-radius:7px!important;}
+  .section.white .solution-box{transform:none!important;}
+  .section.white .solution-box h3{padding-right:0!important;font-size:29px!important;}
+  .section.white .pain-item,.section.white .solution-item{font-size:16.5px!important;font-weight:700!important;}
+}
