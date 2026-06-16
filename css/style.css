@@ -998,3 +998,143 @@ pointer-events:none;
     aspect-ratio:16 / 9!important;
   }
 }
+
+/* ===== CPA UPDATE 2026-06-16: top black header strip + stronger comparison ===== */
+.hero.hero-full{
+  padding-top:0!important;
+}
+.hero-logo{
+  width:calc(100% + 40px)!important;
+  margin:0 -20px 30px!important;
+  padding:20px 20px 18px!important;
+  background:#050505!important;
+  border-bottom:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:0 10px 28px rgba(0,0,0,.28)!important;
+  text-align:center!important;
+  position:relative!important;
+  z-index:5!important;
+}
+.hero-logo span{
+  background:#f02520!important;
+  color:#fff!important;
+}
+
+/* Section 2 problem/solution: make the contrast obvious */
+.section.white .pain-grid{
+  grid-template-columns:.92fr 72px 1.16fr!important;
+  gap:34px!important;
+  align-items:center!important;
+  margin-top:54px!important;
+}
+.section.white .pain-box{
+  background:#fff!important;
+  border:1px solid #eeeeee!important;
+  box-shadow:0 16px 42px rgba(0,0,0,.07)!important;
+  opacity:.88!important;
+}
+.section.white .pain-box h3{
+  color:#222!important;
+}
+.section.white .pain-item{
+  color:#333!important;
+}
+.section.white .pain-item span{
+  color:#b7b7b7!important;
+  font-weight:1000!important;
+}
+.section.white .solution-box{
+  position:relative!important;
+  overflow:hidden!important;
+  transform:scale(1.06)!important;
+  transform-origin:center!important;
+  background:linear-gradient(135deg,#ff2f2a 0%,#f02520 48%,#b90000 100%)!important;
+  border:0!important;
+  color:#fff!important;
+  box-shadow:0 28px 70px rgba(240,37,32,.28), 0 12px 34px rgba(0,0,0,.12)!important;
+  padding:42px 40px!important;
+}
+.section.white .solution-box::before{
+  content:"JIPPLUS DID";
+  position:absolute;
+  right:-22px;
+  top:18px;
+  font-size:54px;
+  line-height:1;
+  font-weight:1000;
+  letter-spacing:-.06em;
+  color:rgba(255,255,255,.09);
+  pointer-events:none;
+}
+.section.white .solution-box::after{
+  content:"추천 솔루션";
+  position:absolute;
+  top:22px;
+  right:24px;
+  padding:8px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+  color:#fff;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:-.03em;
+}
+.section.white .solution-box h3{
+  color:#fff!important;
+  font-size:34px!important;
+  padding-right:110px!important;
+}
+.section.white .solution-item{
+  color:#fff!important;
+  font-size:20px!important;
+  font-weight:950!important;
+}
+.section.white .solution-item .red,
+.section.white .solution-item span{
+  color:#fff!important;
+  width:24px;
+  height:24px;
+  flex:0 0 24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,.22);
+  font-size:16px;
+  margin-top:1px;
+}
+.section.white .arrow-big{
+  color:#f02520!important;
+  font-size:66px!important;
+  text-shadow:0 12px 28px rgba(240,37,32,.22)!important;
+}
+
+@media(max-width:800px){
+  .hero.hero-full{padding-top:0!important;}
+  .hero-logo{
+    width:100vw!important;
+    margin:0 calc(50% - 50vw) 22px!important;
+    padding:16px 18px!important;
+  }
+  .section.white .pain-grid{
+    grid-template-columns:1fr!important;
+    gap:22px!important;
+    margin-top:38px!important;
+  }
+  .section.white .solution-box{
+    transform:none!important;
+    padding:32px 24px!important;
+    border-radius:24px!important;
+  }
+  .section.white .solution-box h3{
+    font-size:29px!important;
+    padding-right:0!important;
+  }
+  .section.white .solution-box::after{
+    position:static!important;
+    display:inline-flex!important;
+    margin-bottom:16px!important;
+  }
+  .section.white .solution-box::before{font-size:40px;top:16px;right:-18px;}
+  .section.white .solution-item{font-size:17px!important;}
+  .section.white .arrow-big{font-size:48px!important;}
+}
